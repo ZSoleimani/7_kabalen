@@ -1,13 +1,13 @@
 import pygame
-
 from deck import Deck
 from ui import Button
+import history_manager
 
-white = (0, 161, 137)
+white = (255, 255, 255)
 black = (0, 0, 0)
-green = (196, 255, 246)
-pink = (255, 128, 162)
-red = (190, 50, 50)
+green = (0, 200, 0)
+pink = (255, 141, 170)
+red = (100, 50, 50)
 grey = (100, 100, 100) #RGB code
 
 display_dimensions = (1100, 800)
@@ -25,7 +25,7 @@ def quit_game():
 def game_loop():
 
     undo_button = Button(display_dimensions, "Undo", (10, 10),
-                         (30, 30), red, centered=False, text_size=11, action="undo")
+                         (30, 30), grey, centered=False, text_size=11, action="undo")
     pause_button = Button(display_dimensions,
                           "Pause", (display_dimensions[0] - 50, 10), (40, 30),
                           grey, centered=False, text_size=10, action="pause")
@@ -35,7 +35,7 @@ def game_loop():
     deck.load_cards()
     deck.shuffle_cards()
     deck.load_piles(display_dimensions)
-    # hm = history_manager.HistoryManager(deck)
+    hm = history_manager.HistoryManager(deck)
 
 
     while True:
