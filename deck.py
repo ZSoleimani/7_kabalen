@@ -19,8 +19,8 @@ class Deck:
         self.selected_cards = []
         self.selected_pile = None
         self.selection_rect = None
-        self.selection_color = (255, 153, 255) #ff99ff
-        self.empty_color = (100, 100, 200) #ff0066
+        self.selection_color = (255, 66, 114)
+        self.empty_color = (255, 166, 189)
 
         # these attributes can be modified when undoing/redoing
         self.piles = piles
