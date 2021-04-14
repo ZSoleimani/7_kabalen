@@ -6,9 +6,9 @@ import history_manager
 white = (255, 255, 255)
 black = (0, 0, 0)
 green = (0, 200, 0)
-pink = (255, 141, 170)
+pink = (217, 108, 137)
 red = (100, 50, 50)
-dark_pink = (255, 66, 114) #RGB code
+dark_pink = (98, 2, 46) #62022e
 
 display_dimensions = (1100, 800)
 
@@ -25,10 +25,10 @@ def quit_game():
 def game_loop():
 
     undo_button = Button(display_dimensions, "Undo", (10, 10),
-                         (30, 30), dark_pink, centered=False, text_size=11, action="undo")
+                         (30, 30), dark_pink, centered=False, text_size=11, text_color=(217, 139, 121), action="undo")
     pause_button = Button(display_dimensions,
                           "Pause", (display_dimensions[0] - 50, 10), (40, 30),
-                          dark_pink, centered=False, text_size=10, action="pause")
+                          dark_pink, centered=False, text_size=10, text_color=(217, 139, 121), action="pause")
 
     buttons = [undo_button, pause_button]
     deck = Deck()
