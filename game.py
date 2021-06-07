@@ -8,7 +8,7 @@ black = (0, 0, 0)
 green = (0, 200, 0)
 pink = (217, 108, 137)
 red = (100, 50, 50)
-dark_pink = (98, 2, 46) #62022e
+dark_pink = (98, 2, 46)  # 62022e
 
 display_dimensions = (1100, 800)
 
@@ -16,14 +16,15 @@ pygame.init()
 game_display = pygame.display.set_mode(display_dimensions)
 
 clock = pygame.time.Clock()
-FPS = 10 #framerate
+FPS = 10  # framerate
+
 
 def quit_game():
     pygame.quit()
     quit()
 
-def game_loop():
 
+def game_loop() -> object:
     undo_button = Button(display_dimensions, "Undo", (10, 10),
                          (30, 30), dark_pink, centered=False, text_size=11, text_color=(217, 139, 121), action="undo")
     pause_button = Button(display_dimensions,
@@ -36,7 +37,6 @@ def game_loop():
     deck.shuffle_cards()
     deck.load_piles(display_dimensions)
     hm = history_manager.HistoryManager(deck)
-
 
     while True:
         for event in pygame.event.get():
