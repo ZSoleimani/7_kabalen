@@ -1,12 +1,9 @@
-import random
-
 class Card:
     def __init__(self, name_of_image, card_size, rank, suit, face_up = False):
         self.name_of_image = name_of_image
         self.card_size = card_size
         self.rank = rank
         self.suit = suit
-
         self.face_up = face_up
 
         if self.suit == "diamonds" or self.suit == "hearts":
@@ -30,7 +27,6 @@ class Card:
 
         if self.x < mouse_x < self.x + width and self.y < mouse_y < self.y + height:
             return True
-
         else:
             return False
 
